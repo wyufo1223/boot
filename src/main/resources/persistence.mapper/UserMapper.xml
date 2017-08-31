@@ -18,4 +18,20 @@
               from user
        </select>
 
+       <select id="findByName" resultType="User" useCache="false">
+              SELECT *
+              FROM USER
+              WHERE NAME = #{name}
+       </select>
+
+       <insert id="save">
+              insert into user
+              set name = #{name}
+       </insert>
+
+       <delete id="delete">
+              delete from user
+              where id = #{id}
+       </delete>
+
 </mapper>

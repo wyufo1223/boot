@@ -12,11 +12,13 @@ import java.util.List;
 public interface IUserMapper {
 
 //    @Select("SELECT * FROM USER")
-    public List<User> getUsers();
+    List<User> getUsers();
 
-    @Select("SELECT * FROM USER WHERE NAME = #{name}")
+    Long save(User user);
+
+//    @Select("SELECT * FROM USER WHERE NAME = #{name}")
     User findByName(@Param("name") String name);
 
-    @Delete("DELETE FROM users WHERE id =#{id}")
-    void delete(Long id);
+//    @Delete("DELETE FROM users WHERE id =#{id}")
+    Long delete(Long id);
 }

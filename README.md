@@ -4,6 +4,7 @@ SSM,
 springMVC,
 RESTful
 mybatis,
+JUnit
 maven,
 git
 
