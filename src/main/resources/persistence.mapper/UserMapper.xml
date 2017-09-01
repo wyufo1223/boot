@@ -13,15 +13,21 @@
               <result column="address" property="address" />
        </resultMap>
 
-       <select id="getUsers" resultType="User" useCache="false">
+       <select id="getAllUsers" resultType="User" useCache="false">
               select *
               from user
        </select>
 
-       <select id="findByName" resultType="User" useCache="false">
-              SELECT *
-              FROM USER
-              WHERE NAME = #{name}
+       <select id="getUserById" resultType="User" useCache="false">
+              select *
+              from user
+              where id = #{id}
+       </select>
+
+       <select id="getUserByName" resultType="User" useCache="false">
+              select *
+              from user
+              where name like '%'||#{name}||'%'
        </select>
 
        <insert id="save">

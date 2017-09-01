@@ -12,7 +12,11 @@ import java.util.List;
 public interface IUserMapper {
 
 //    @Select("SELECT * FROM USER")
-    List<User> getUsers();
+    List<User> getAllUsers();
+
+    User getUserById(Long id);
+
+    List<User> getUserByName(String name);
 
     Long save(User user);
 
