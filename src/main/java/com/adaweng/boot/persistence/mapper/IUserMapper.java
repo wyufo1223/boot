@@ -20,9 +20,6 @@ public interface IUserMapper {
 
     Long save(User user);
 
-//    @Select("SELECT * FROM USER WHERE NAME = #{name}")
-    User findByName(@Param("name") String name);
-
 //    @Delete("DELETE FROM users WHERE id =#{id}")
     Long delete(Long id);
 }

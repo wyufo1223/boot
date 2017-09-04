@@ -18,6 +18,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -48,14 +49,14 @@ public class IUserMapperTest {
     }
 
     @Test
-    public void testFindByName() throws Exception {
+    public void testGetUserByName() throws Exception {
         User user = new User();
         user.setName("Ada Weng");
-        User user1 = userMapper.findByName(user.getName());
-        Assert.assertEquals(user1.getName(), user.getName());
+        List<User> users = userMapper.getUserByName(user.getName());
+        Assert.assertEquals(users.get(0).getName(), user.getName());
 
         String name = "Ada Weng";
-        Assert.assertEquals(name, userMapper.findByName(user.getName()).getName());
+        Assert.assertEquals(name, userMapper.getUserByName(user.getName()).get(0).getName());
     }
 
     @Test
