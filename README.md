@@ -9,6 +9,9 @@ JUnit
 maven,
 git
 
+activemq P2P, topic
+redis
+
 spring boot & mybatis config:
     pom.xml:Add mybatis-spring-boot-starter, mysql-connector-java
 
