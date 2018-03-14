@@ -2,9 +2,6 @@ package com.adaweng.boot.entity;
 
 import java.util.Date;
 
-/**
- * Created by eyaweng on 8/25/2017.
- */
 public class User {
     private Long id;
     private String name;

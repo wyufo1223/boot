@@ -9,9 +9,6 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by eyaweng on 9/21/2017.
- */
 @Controller
 @PropertySource("classpath:application.properties")
 public class HelloController {

@@ -22,4 +22,6 @@ public interface IUserMapper {
 
 //    @Delete("DELETE FROM users WHERE id =#{id}")
     Long delete(Long id);
+
+	void update(Long id, User u);
 }
